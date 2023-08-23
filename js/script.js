@@ -17,16 +17,6 @@ function bindData(articles) {
 
     cardsContainer.innerHTML = '';
 
-    if (!Array.isArray(articles)) {
-        console.error("Invalid data format. Expected an array of articles.");
-        return;
-    }
-
-    if (articles.length === 0) {
-        console.log("No articles found.");
-        return;
-    }
-
     articles.forEach(article => {
         if (!article.urlToImage) return;
         const cardClone = newsCardTemplate.content.cloneNode(true);
