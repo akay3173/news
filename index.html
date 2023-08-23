@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News TADHKA</title>
+    <link rel="stylesheet" href="css/style.css">
+ </head>
+  <body>
+  <nav>
+   <div class="main-nav container flex">
+    <a href="#" onclick="reload()" class="logo">
+    <img src="./news1.jpg" alt="company logo">
+    </a>
+   <div class="nav-links">`
+    <ul class="flex">
+        <li class="link item" id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+        <li class="link item" id="gpt" onclick="onNavItemClick('gpt')">ChatGPT</li>
+        <li class="link item" id="crime" onclick="onNavItemClick('crime')">Cyber Crimes</li>
+        <li class="link item" id="nft" onclick="onNavItemClick('nft')">NFT</li>
+        <li class="link item" id="poli" onclick="onNavItemClick('poli')">Politics</li>
+    </ul>
+    </div>
+   <div class="search flex">
+    <input id = "search-text" type="text" class="fa-search" placeholder="Technology">
+     <button id="searchit" class="search-button">Search</button>
+   </div>
+   </div>
+   </nav>
+   <main>
+    <div class="cards-container container flex" id ="cards-container"></div>
+   </main>
+    <template id="template-news">
+        <div class="card">
+            <div class="class-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="src">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">title</h3>
+                <h6 class="news-source" id="news-source">26/04/2023</h6>
+                <p class="news-desc" id="news-desc">gnbklsmkbdk fjalfjvj fksjdhjk hgiurh iuh egiu hguehouga jri gj ifgir th tiuhjg nfsbkjn fkerj iji sriugi jfnv iuza ed.</p>
+            </div>
+        </div>
+    </template>
+   <script src="js/script.js"></script>   
+</body>
+</html>

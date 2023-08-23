@@ -1,0 +1,124 @@
+ @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,600&family=Quicksand&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;  
+}
+body {
+    font-family: 'Bricolage Grotesque', sans-serif;
+font-family: 'Quicksand', sans-serif;
+    color : darkblue;
+}
+p {
+    font-family: "Roboto", sans-serif;
+    color :black;
+    line-height: 1.4rem;
+}
+a{
+    text-decoration :none;
+}
+ul {
+    list-style: none;
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+.container{
+    max-width: 1180px;
+    margin-inline:auto;
+    overflow: hidden;
+}
+nav{
+    background-color: aliceblue;
+    box-shadow: 0 0 4px #bbd0e2;
+    position: fixed;
+    top: 0%;
+    z-index: 99;
+    left: 0%;
+    right: 0%;
+}
+.main-nav {
+    justify-content: space-between;
+    padding-block: 8px;
+}
+.logo img {
+    width: 165px;
+}
+.nav-links ul {
+    gap: 5rem;
+}
+.link {
+    cursor: pointer;
+}
+.link:hover {
+    color:rgb(201, 5, 246);
+}
+.link:active {
+    color:cadetblue;
+}
+.item.active {
+    color:rgb(9, 189, 244);
+}
+.search {
+    height:32px;
+    gap:8px;
+}
+.fa-search {
+    width:200px;
+    height:100%;
+    padding-inline: 12px;
+    border-radius: 4px;
+    border: 2px solid maroon;
+    font-family: "Roboto", sans-serif;
+}
+.search-button{
+    background-color: deepskyblue;
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius:4px;
+    cursor:pointer;
+}
+.search-button:hover {
+    background-color: darkblue;
+}
+main {
+    padding:20px;
+    margin-top:100px;
+}
+.cards-container {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+}
+.card {
+    width:350px;
+    min-height:400px;
+    box-shadow: 0 0 4px #d4ecff;
+    border-radius: 4px;
+    cursor:pointer;
+    background-color: #fff;
+    overflow: hidden; 
+    transition: all 0.3s ease;
+}
+.card:hover {
+    box-shadow: 1px 1px 8px lightgoldenrodyellow;
+    background-color: #f9fdff;
+    transform : translate(+3px);
+}
+.card-header {
+    width: 100%;
+    height : 180px;
+    object-fit: cover;
+}
+#src {
+    height: 200px;
+}
+.card-content {
+    padding: 12px;
+}
+.news-source {
+    margin-block: 12px;
+}
