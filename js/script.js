@@ -16,21 +16,25 @@
         function bindData(articles) {
             const cardsContainer = document.getElementById("cards-container");
             const newsCardTemplate = document.getElementById("template-news");
-
+        
             cardsContainer.innerHTML = '';
-
+        
             if (!Array.isArray(articles)) {
                 console.error("Invalid data format. Expected an array of articles.");
+                console.error("Received data:", articles);
                 return;
             }
-
+        
             if (articles.length === 0) {
                 console.log("No articles found.");
                 return;
             }
-
+        
             articles.forEach(article => {
-                if (!article.urlToImage) return;
+                if (!article.urlToImage) {
+                    console.warn("Article skipped due to missing image:", article);
+                    return;
+                }
                 const cardClone = newsCardTemplate.content.cloneNode(true);
                 fillDataInCard(cardClone, article);
                 cardsContainer.appendChild(cardClone);
